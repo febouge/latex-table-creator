@@ -6,5 +6,5 @@ Simple LaTeX table code creator from user input.
 
 * Create Menu class to handle user input (instead of init.rb).
 * Accept CSV file as an input for the table.
-* Tests.
+* Tests (and Travis CI configuration).
 * Check for the properly structure for the project.
