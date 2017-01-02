@@ -1,54 +1,57 @@
-require './table.rb'
+# require './table.rb'
 
 # This class composes a latex table from a Table class and prints it
 # to a file.
 class LatexTableWriter
-  START_TEXT = "\\begin{table}\n\\begin{center}\n\\begin{tabular}".freeze
-  FINAL_TEXT = "\\end{tabular}\n\\caption{}\n\\label{}".freeze +
-               "\n\\end{center}\n\\end{table}\n".freeze
-  VERTICAL_SEPARATOR = "\&".freeze
-  HORIZONTAL_SEPARATOR = "\\hline\n".freeze
-
-  def self.export_latex_table(table, filename)
-    filename = get_valid_file(filename)
-    File.open(filename, 'w') { |file| file.write(compose_latex_table(table)) }
-  end
-
-  def self.compose_latex_table(table)
-    @latex_table = START_TEXT + generate_centered_definition(table) +
-                   HORIZONTAL_SEPARATOR
-    table.rows.times do |i|
-      table.columns.times do |j|
-        @latex_table += table.data[i + j].to_s
-        !final_column(j + 1, table) && @latex_table += VERTICAL_SEPARATOR
-      end
-      @latex_table += "\\\\\n" + HORIZONTAL_SEPARATOR
-    end
-    @latex_table += FINAL_TEXT
-  end
-
-  def self.get_valid_file(filepath)
-    while File.exist?(filepath)
-      puts 'The selected file already exists. Please pick another one'
+  class << self
+    def export_latex_table(table)
+      puts Constants::SELECT_FILENAME
       STDOUT.flush
-      filepath = gets.chomp.to_s
+      filename = gets.chomp.to_s
+      filename = get_valid_file(filename)
+      File.open(filename, 'w') { |file| file.write(compose_latex_table(table)) }
+      return File.absolute_path(filename)
     end
-    filepath
-  end
 
-  def self.generate_centered_definition(table)
-    centered_column = 'c|'
-    result = '{|'
-    table.rows.times do
-      result += centered_column
+    private
+
+    def compose_latex_table(table)
+      @latex_table = Constants::TABLE_BEGIN +
+                     generate_centered_definition(table) +
+                     Constants::H_SEPARATOR
+      table.rows.times do |i|
+        table.columns.times do |j|
+          @latex_table += table.data[i + j].to_s
+          @latex_table += Constants::V_SEPARATOR unless table.columns.eql?(j + 1)
+        end
+        @latex_table += Constants::TABLE_NEXT_ROW
+      end
+      @latex_table += Constants::TABLE_FINAL
     end
-    result += "}\n"
-  end
 
-  def self.final_column(number, table)
-    table.columns == number
-  end
+    def get_valid_file(filepath)
+      while File.exist?(filepath)
+        puts Constants::EXISTING_FILE
+        STDOUT.flush
+        filepath = gets.chomp.to_s
+      end
+      put_file_extension(filepath)
+    end
 
-  private_class_method :compose_latex_table, :get_valid_file,
-                       :generate_centered_definition, :final_column
+    def generate_centered_definition(table)
+       return Constants::CENTER_START + Constants::CENTER_COLUMN * table.columns.to_i +
+       Constants::CENTER_END
+    end
+
+    def final_column(number, table)
+      table.columns == number
+    end
+
+    def put_file_extension(filename)
+      unless filename.include? Constants::FILE_EXTENSION
+        filename += Constants::FILE_EXTENSION
+      end
+      filename
+    end
+  end
 end

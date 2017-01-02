@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+require './src/constants.rb'
+require './src/main.rb'
+require './src/menu.rb'
+require './src/table.rb'
+require './src/latex_table_writer.rb'
+
+Main.start if __FILE__ == $PROGRAM_NAME

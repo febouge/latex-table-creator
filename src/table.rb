@@ -1,17 +1,14 @@
 # Table class
 class Table
   attr_reader :rows, :columns, :data
-  FINAL_TEXT = "\\end{tabular}\n\\caption{}\n\\label{}".freeze +
-               "\n\\end{center}\n\\end{table}".freeze
-  START_TEXT = "\\end{table}\n\\begin{center}\n\\begin{tabular}".freeze
 
-  def initialize(rows, columns, table_data)
+  def initialize(rows, columns)
     @rows = rows
     @columns = columns
-    @data = table_data
+    @data = []
   end
 
-  def ask_for_data_content
+  def fill_data
     @rows.times do |i|
       @columns.times do |j|
         puts "Introduce the element M#{i + 1}-#{j + 1}:"
@@ -22,8 +19,11 @@ class Table
   end
 
   def show_data
-    @data.each do |element|
-      puts element
+    @rows.times do |i|
+      @columns.times do |j|
+        print @data[i + j]
+        print ' ' until @columns.eql?(j + 1)
+      end
     end
   end
 end
