@@ -20,9 +20,11 @@ class Main
         @table = import_csv_table
       when 3.to_s
         filename = LatexTableWriter.export_latex_table(@table) unless @table.nil?
-        puts Constants::SAVED_FILE + filename 
+        puts Constants::SAVED_FILE + filename
       when 4.to_s
         puts Constants::EXIT_OPTION
+      when 5.to_s
+        @table.show_data
       else
         puts Constants::INVALID_OPTION
       end

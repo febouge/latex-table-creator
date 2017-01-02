@@ -19,7 +19,7 @@ ruby latex_table_creator
 
 * ~~Create Menu class to handle user input (instead of init.rb).~~
 * Accept CSV file as an input for the table.
-* Tests (and Travis CI configuration).
+* Tests (and Travis CI configuration) with Rake.
 * ~~Check another structure for the project.~~
 
 ## Output file example
