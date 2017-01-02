@@ -2,6 +2,19 @@
 
 Simple LaTeX table code creator from user input.
 
+[![Build Status](https://travis-ci.org/febouge/latex-table-creator.svg?branch=master)](https://travis-ci.org/febouge/latex-table-creator)
+
+## Usage
+
+Clone the code and run:
+
+```
+./latex_table_creator
+```
+or
+```
+ruby latex_table_creator
+```
 ##ToDo
 
 * ~~Create Menu class to handle user input (instead of init.rb).~~
