@@ -14,7 +14,7 @@ rvm:
   - 2.3
   
 after_success:
-  - codecov
+  - bash <(curl -s https://codecov.io/bash)
 
 #Notifications config
 notifications:
