@@ -1,4 +1,5 @@
 require_relative '../src/table.rb'
+require_relative 'helper.rb'
 require 'test/unit'
 
 # Test for Table class.
