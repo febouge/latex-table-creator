@@ -3,6 +3,7 @@
 Simple LaTeX table code creator from user input.
 
 [![Build Status](https://travis-ci.org/febouge/latex-table-creator.svg?branch=master)](https://travis-ci.org/febouge/latex-table-creator)
+[![codecov](https://codecov.io/gh/febouge/latex-table-creator/branch/master/graph/badge.svg)](https://codecov.io/gh/febouge/latex-table-creator)
 
 ## Usage
 
