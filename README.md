@@ -19,9 +19,10 @@ ruby latex_table_creator
 ##ToDo
 
 * ~~Create Menu class to handle user input (instead of init.rb).~~
-* Accept CSV file as an input for the table.
-* Tests (and Travis CI configuration) with Rake.
+* ~~Accept CSV file as an input for the table.~~
+* Tests ~~(and Travis CI configuration) with Rake.~~
 * ~~Check another structure for the project.~~
+* Fix the project in Codecov or change it to Coversall. 
 
 ## Output file example
 The output file generated with this little utility should be similar to the following code:
