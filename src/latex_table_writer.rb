@@ -1,4 +1,5 @@
-# require './table.rb'
+require_relative './constants.rb'
+require_relative './table.rb'
 
 # This class composes a latex table from a Table class and prints it
 # to a file.
@@ -10,7 +11,7 @@ class LatexTableWriter
       filename = gets.chomp.to_s
       filename = get_valid_file(filename)
       File.open(filename, 'w') { |file| file.write(compose_latex_table(table)) }
-      return File.absolute_path(filename)
+      File.absolute_path(filename)
     end
 
     private

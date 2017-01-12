@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
-require './src/constants.rb'
+# require './src/constants.rb'
 require './src/main.rb'
-require './src/menu.rb'
-require './src/table.rb'
-require './src/latex_table_writer.rb'
+# require './src/menu.rb'
+# require './src/table.rb'
+# require './src/latex_table_writer.rb'
+# require './src/csv_table_parser.rb'
+# require 'csv'
 
 Main.start if __FILE__ == $PROGRAM_NAME

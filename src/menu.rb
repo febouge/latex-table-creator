@@ -1,4 +1,4 @@
-# require_relative './constants.rb'
+require_relative './constants.rb'
 # Menu class.
 # This class show the app menu and gets user's input.
 class Menu

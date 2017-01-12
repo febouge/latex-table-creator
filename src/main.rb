@@ -1,3 +1,8 @@
+require_relative './menu.rb'
+require_relative './constants.rb'
+require_relative './latex_table_writer.rb'
+require_relative './table.rb'
+require_relative './csv_table_parser.rb'
 # Main app class
 class Main
   class << self
@@ -35,7 +40,7 @@ class Main
       columns = ask_for_table_property(Constants::SELECT_COLUMNS)
       table = Table.new(rows, columns)
       table.fill_data
-      return table
+      table
     end
 
     def ask_for_table_property(text_to_show)
@@ -45,7 +50,14 @@ class Main
         STDOUT.flush
         opc = gets.chomp.to_i
       end
-      return opc
+      opc
+    end
+
+    def import_csv_table
+      puts Constants::ASK_FOR_FILE_PATH
+      filepath = Menu.capture_user_option
+      table_parser = CSVTableParser.new(filepath)
+      table_parser.parse_csv_to_table
     end
   end
 end

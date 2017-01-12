@@ -15,6 +15,8 @@ class Constants
   SELECT_ROWS = 'Enter the number of rows:'.freeze
   SELECT_COLUMNS = 'Enter te number of columns:'.freeze
   SELECT_FILENAME = 'Enter the filename to save the LaTeX table '.freeze
+  ASK_FOR_FILE_PATH = 'Give me the path to the CSV file:'.freeze
+
   # LaTeX constants
   FILE_EXTENSION = '.tex'.freeze
   TABLE_BEGIN = "\\begin{table}\n\\begin{center}\n\\begin{tabular}".freeze
@@ -27,7 +29,9 @@ class Constants
   CENTER_COLUMN = 'c|'.freeze
   CENTER_END = "}\n".freeze
 
-  #File constants
-  EXISTING_FILE = 'The selected file already exists. Please pick another one'.freeze
-  SAVED_FILE = 'The file has been properly saved in: '
+  # File constants
+  EXISTING_FILE = 'The selected file already exists. '\
+                  'Please pick another one'.freeze
+  SAVED_FILE = 'The file has been properly saved in: '.freeze
+  NO_VALID_FILE = 'The file or filepath are not valid: '.freeze
 end
