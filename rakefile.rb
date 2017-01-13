@@ -1,3 +1,4 @@
+require_relative './test/test_helper.rb'
 require 'rake/testtask'
 
 desc 'Run tests'

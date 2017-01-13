@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
+gem 'coveralls', :require => false
 gem 'rake'
 gem 'test-unit'
-gem 'codecov', :require => false, :group => :test

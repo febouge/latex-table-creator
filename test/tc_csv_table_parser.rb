@@ -1,5 +1,5 @@
 require_relative '../src/csv_table_parser.rb'
-require_relative 'helper.rb'
+# require_relative 'helper.rb'
 require 'test/unit'
 
 # Test for Table class.
