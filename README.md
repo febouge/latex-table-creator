@@ -3,7 +3,6 @@
 Simple LaTeX table code creator from user input.
 
 [![Build Status](https://travis-ci.org/febouge/latex-table-creator.svg?branch=master)](https://travis-ci.org/febouge/latex-table-creator)
-[![Coverage Status](https://coveralls.io/repos/github/febouge/latex-table-creator/badge.svg?branch=master)](https://coveralls.io/github/febouge/latex-table-creator?branch=master)
 
 ## Usage
 
@@ -22,7 +21,7 @@ ruby latex_table_creator
 * ~~Accept CSV file as an input for the table.~~
 * Tests ~~(and Travis CI configuration) with Rake.~~
 * ~~Check another structure for the project.~~
-* Fix the project in Codecov or change it to Coversall. 
+* Fix the project in Codecov or change it to Coversall.
 
 ## Output file example
 The output file generated with this little utility should be similar to the following code:
