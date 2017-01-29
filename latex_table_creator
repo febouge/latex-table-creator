@@ -7,4 +7,4 @@ require './src/main.rb'
 # require './src/csv_table_parser.rb'
 # require 'csv'
 
-Main.start if __FILE__ == $PROGRAM_NAME
+Main.new.start if __FILE__ == $PROGRAM_NAME

@@ -5,13 +5,15 @@ class Constants
   MENU_OPTION_1 = "1. Define new table. \n".freeze
   MENU_OPTION_2 = "2. Import CSV file. \n".freeze
   MENU_OPTION_3 = "3. Export LaTeX code. \n".freeze
-  MENU_OPTION_4 = "4. Exit. \n".freeze
+  MENU_OPTION_4 = "4. Show table data. \n".freeze
+  MENU_OPTION_5 = "5. Quit. \n".freeze
   SEPARATOR = ('-' * 20).freeze
   INVALID_OPTION = "The option introduced is not valid\n".freeze
   EXIT_OPTION = 'Exit option selected.'.freeze
   GOODBY = 'Bye!'.freeze
   FULL_MENU = (MENU_HEADER + MENU_OPTION_1 + MENU_OPTION_2 +
-               MENU_OPTION_3 + MENU_OPTION_4 + SEPARATOR).freeze
+               MENU_OPTION_3 + MENU_OPTION_4 + MENU_OPTION_5 +
+               SEPARATOR).freeze
   SELECT_ROWS = 'Enter the number of rows:'.freeze
   SELECT_COLUMNS = 'Enter te number of columns:'.freeze
   SELECT_FILENAME = 'Enter the filename to save the LaTeX table '.freeze
