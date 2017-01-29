@@ -4,7 +4,6 @@ sudo: false
 before_install:
   - gem install bundler
   - gem update bundler
-  - pip install --user codecov
 
 #Language config
 language: ruby
@@ -13,9 +12,6 @@ rvm:
   - 2.1
   - 2.2
   - 2.3
-  
-after_success:
-  - codecov
 
 #Notifications config
 notifications:
