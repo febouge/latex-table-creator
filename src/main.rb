@@ -11,7 +11,7 @@ class Main
   end
 
   def start
-    until @option.eql?(@exit_option)
+    until @exit_option.eql?(@option)
       @menu.show
       @option = @menu.capture_user_option
       process_user_option
