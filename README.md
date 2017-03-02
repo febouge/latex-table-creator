@@ -2,7 +2,12 @@
 
 Simple LaTeX table code creator from user input.
 
-[![Build Status](https://travis-ci.org/febouge/latex-table-creator.svg?branch=master)](https://travis-ci.org/febouge/latex-table-creator)
+[![Build Status - Travis CI](https://travis-ci.org/febouge/latex-table-creator.svg?branch=master)](https://travis-ci.org/febouge/latex-table-creator)
+
+[![Build status - GitLab CI](https://gitlab.com/febouge/latex-table-creator/badges/master/build.svg)](https://gitlab.com/febouge/latex-table-creator/commits/master)
+[![Coverage report](https://gitlab.com/febouge/latex-table-creator/badges/master/coverage.svg)](https://gitlab.com/febouge/latex-table-creator/commits/master)
+
+
 
 ## Usage
 
