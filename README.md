@@ -20,6 +20,7 @@ or
 ```
 ruby latex_table_creator
 ```
+
 ##ToDo
 
 * ~~Create Menu class to handle user input (instead of init.rb).~~
